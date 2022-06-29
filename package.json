@@ -1,0 +1,27 @@
+{
+  "name": "wonder_gym_backend",
+  "version": "1.0.0",
+  "description": "Wonder Gym backend",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wendy-Ortiz/Wonder_Gym_Backend.git"
+  },
+  "keywords": [
+    "beckend",
+    "wonder-gym-be"
+  ],
+  "author": "A.Matus-W.Ortiz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Wendy-Ortiz/Wonder_Gym_Backend/issues"
+  },
+  "homepage": "https://github.com/Wendy-Ortiz/Wonder_Gym_Backend#readme",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1"
+  }
+}
