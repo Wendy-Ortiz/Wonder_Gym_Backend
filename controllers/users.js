@@ -1,34 +1,9 @@
 const bcrypt = require("bcrypt");
-const saltRounds = 10;
-
-let lastId = 3;
-pw1 = bcrypt.hashSync('helao123', saltRounds);
-pw2 = bcrypt.hashSync('soydelguarco', saltRounds);
-pw3 = bcrypt.hashSync('patito', saltRounds);
-
-let all_Users = [{
-    id: 1,
-    name: "Axel Matus",
-    email: "axel.matus@ucr.ac.cr",
-    password: pw1
-},
-{
-    id: 2,
-    name: "Wendy Ortiz",
-    email: "wendy.ortiz@ucr.ac.cr",
-    password: pw2
-},
-{
-    id: 3,
-    name: "Daniel Calvo",
-    email: "daniel.calvo@ucr.ac.cr",
-    password: pw3
-},
-]
+const data = require('../data.js');
 
 exports.listUsers = async (req, res) => {
     try {
-        const users = all_Users;
+        const users = data.all_Users;
         res.status(200).json(users);
     } catch (error) {
         res.status(500).json({
@@ -48,7 +23,7 @@ exports.createUser = async (req, res) => {
             id: newUserId,
             name: userPayload.name,
             email: userPayload.email,
-            password: await bcrypt.hash(userPayload.password, saltRounds)
+            password: await bcrypt.hash(userPayload.password, process.env.SALTROUNDS)
         })
         console.log(all_Users);
         res.json(all_Users[lastId - 1]);
