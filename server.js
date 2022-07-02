@@ -8,9 +8,6 @@ dotenv.config();
 const server = express();
 server.use(express.json());
 
-const userOne = 'axel.matus@ucr.ac.cr'
-const passwordOne = 'papa_frita123'
-
 //Mount routes
 server.use("/users", usersRoutes);
 

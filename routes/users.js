@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
 
+const { checkUserIsAuthenticated, checkRoles} = require("../middlewares/auth");
+const { ROLES } = require("../utils/constants");
 const {
     listUsers,
     createUser,
@@ -9,21 +11,9 @@ const {
 
 router
     .route("/")
-    .get(listUsers)
+    .get([checkUserIsAuthenticated, checkRoles([ROLES.ADMIN])], listUsers)
     .post(createUser);
 
 router.route("/login").post(loginUser);
 
 module.exports = router;
-// server.post('/users', (req, res) => {
-//     const userPayload = req.body;
-//     console.log(userPayload.username);
-//     console.log(userPayload.password);
-//     result = ''
-//     if(userPayload.username === userOne && userPayload.password === passwordOne){
-//         result = `Welcome ${userOne}`;
-//     } else {
-//         result = 'invalid dataa!';
-//     }
-//     res.json(result);
-// });
