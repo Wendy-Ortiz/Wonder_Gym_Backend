@@ -8,8 +8,8 @@ const saltRounds = parseInt(process.env.SALTROUNDS);
 
 let lastId = 3;
 pw1 = bcrypt.hashSync('helao123', saltRounds);
-pw2 = bcrypt.hashSync('soydelguarco',saltRounds);
-pw3 = bcrypt.hashSync('patito', saltRounds);
+pw2 = bcrypt.hashSync('guarco123',saltRounds);
+pw3 = bcrypt.hashSync('patito20', saltRounds);
 
  exports.all_Users = [{
     id: 1,

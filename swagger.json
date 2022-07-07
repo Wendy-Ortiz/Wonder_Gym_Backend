@@ -5,7 +5,7 @@
     "description": "Este es el API de la aplicación Web de Wonder Gym.",
     "version": "1.0.0"
   },
-  "host": "localhost:7500",
+  "host": "localhost:3001",
   "basePath": "/",
   "schemes": [
     "http",
@@ -180,18 +180,6 @@
         "password": {
           "type": "string",
           "example": "patito"
-        },
-        "countryCode": {
-          "type": "number",
-          "example": 506
-        },
-        "phone": {
-          "type": "number",
-          "example": 70155104
-        },
-        "birthday": {
-          "type": "string",
-          "example": "1989-10-16"
         }
       }
     },

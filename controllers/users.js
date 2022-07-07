@@ -67,16 +67,16 @@ exports.loginUser = async (req, res) => {
             res.status(401).send("Invalid credentials");
             return;
         }
-        const rolesIds = data.roles.map((r) => r.idRol);
+        let rolesIds = data.roles.filter(r => r.id === user[0].id);
+        rolesIds = rolesIds.map((r) => r.idRol);
         const token = jwt.sign(
-            { userId: user[0].id, roles: rolesIds },
+            { userId: user[0].id, userName: user[0].name, roles: rolesIds },
             process.env.JWT_KEY,
-            { expiresIn: "20m" }
+            { expiresIn: "40m" }
         );
 
         res.json({
             // Envia todos los datos del usuario loggeado y su token
-            ...user[0],
             token,
         });
     } catch (error) {
