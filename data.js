@@ -6,7 +6,6 @@ dotenv.config();
 // ALL USERS
 const saltRounds = parseInt(process.env.SALTROUNDS);
 
-let lastId = 3;
 pw1 = bcrypt.hashSync('helao123', saltRounds);
 pw2 = bcrypt.hashSync('guarco123',saltRounds);
 pw3 = bcrypt.hashSync('patito20', saltRounds);
@@ -52,3 +51,4 @@ exports.roles = [{
 
 exports.confirmationCode = [
 ]
+

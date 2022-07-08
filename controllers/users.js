@@ -27,18 +27,18 @@ exports.createUser = async (req, res) => {
     try {
         const userPayload = req.body;
         //Append to allUsers Array
+        let lastId = (data.all_Users).length
         const newUserId = lastId + 1;
-        lastId = newUserId;
         data.all_Users.push({
             id: newUserId,
             name: userPayload.name,
             email: userPayload.email,
             password: await bcrypt.hash(
                 userPayload.password,
-                process.env.SALTROUNDS
+                saltRounds
             ),
         });
-        res.json(data.all_Users[lastId - 1]);
+        res.status(200).json(data.all_Users[lastId].id);
     } catch (error) {
         res.status(500).json({
             message:
