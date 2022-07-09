@@ -17,6 +17,32 @@ exports.listUsers = async (req, res) => {
     }
 };
 
+exports.listUser = async(req, res) => {
+    // #swagger.tags = ['Users']
+    /*  #swagger.parameters['obj'] = {
+          in: 'body',
+          description: 'Send data of specific user',
+          schema: { $ref: '#/definitions/ListUser' }
+  } */
+    try {
+    const userPayload = req.body;
+    const users = data.usersData;
+    console.log(users, "id", userPayload.id );
+    const userReq = users.filter((element)=>  element.id === userPayload.id )
+    console.log(userReq);
+    if (!userReq || userReq.length === 0){
+        res.status(401).send("Datos no válidos");
+        return;
+    }
+    res.status(200).json(userReq);
+    } catch (error) {
+        res.status(500).json({
+            message: "Ocurrió un error al recuperar el usuario.",
+            error,
+        });
+    }
+}
+
 exports.createUser = async (req, res) => {
     // #swagger.tags = ['Users']
     /*  #swagger.parameters['obj'] = {
@@ -52,7 +78,7 @@ exports.loginUser = async (req, res) => {
     // #swagger.tags = ['Users']
     /*  #swagger.parameters['obj'] = {
           in: 'body',
-          description: 'Add a user',
+          description: 'Login a user and send userData and a token',
           schema: { $ref: '#/definitions/LoginUser' }
   } */
     try {
@@ -88,7 +114,7 @@ exports.recoverPassword = async (req, res) => {
     // #swagger.tags = ['Users']
     /*  #swagger.parameters['obj'] = {
           in: 'body',
-          description: 'Add a user',
+          description: 'Send recoverCode to user to be used to reset the password',
           schema: { $ref: '#/definitions/RecoverPassword' }
   } */
     try {
@@ -127,7 +153,7 @@ exports.resetPassword = async (req, res) => {
     // #swagger.tags = ['Users']
     /*  #swagger.parameters['obj'] = {
           in: 'body',
-          description: 'Add a user',
+          description: 'Reset a user Password',
           schema: { $ref: '#/definitions/ResetPassword' }
   } */
     try {

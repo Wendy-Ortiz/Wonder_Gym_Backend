@@ -68,6 +68,35 @@
         }
       }
     },
+    "/users/id": {
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "Send data of specific user",
+            "schema": {
+              "$ref": "#/definitions/ListUser"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
     "/users/login": {
       "post": {
         "tags": [
@@ -78,7 +107,7 @@
           {
             "name": "obj",
             "in": "body",
-            "description": "Add a user",
+            "description": "Login a user and send userData and a token",
             "schema": {
               "$ref": "#/definitions/LoginUser"
             }
@@ -110,7 +139,7 @@
           {
             "name": "obj",
             "in": "body",
-            "description": "Add a user",
+            "description": "Send recoverCode to user to be used to reset the password",
             "schema": {
               "$ref": "#/definitions/RecoverPassword"
             }
@@ -142,7 +171,7 @@
           {
             "name": "obj",
             "in": "body",
-            "description": "Add a user",
+            "description": "Reset a user Password",
             "schema": {
               "$ref": "#/definitions/ResetPassword"
             }
