@@ -120,3 +120,30 @@ exports.usersData = [{
     contraindications: "Presión alta"
 },
 ]
+
+exports.usersRoutines = [{
+    id:2,
+    routineName: "Rutina Lunes",
+    exercises: ["Ejercicio 1","Ejercicio 2","Ejercicio 3","Ejercicio 4"]
+},
+{
+    id:2,
+    routineName: "Rutina Martes",
+    exercises: ["Ejercicio 1","Ejercicio 2","Ejercicio 3","Ejercicio 4"]
+},
+{
+    id:2,
+    routineName: "Rutina Miercoles",
+    exercises: ["Ejercicio 1","Ejercicio 2","Ejercicio 3","Ejercicio 4"]
+},
+{
+    id:2,
+    routineName: "Rutina Jueves",
+    exercises: ["Ejercicio 1","Ejercicio 2","Ejercicio 3","Ejercicio 4"]
+},
+{
+    id:2,
+    routineName: "Rutina Viernes",
+    exercises: ["Ejercicio 1","Ejercicio 2","Ejercicio 3","Ejercicio 4"]
+},
+]

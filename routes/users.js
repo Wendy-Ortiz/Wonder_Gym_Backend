@@ -23,7 +23,7 @@ router
   .get([checkUserIsAuthenticated, checkRoles([ROLES.ADMIN])], listUsers)
   .post([validateSchema(createUserSchema)], createUser);
 
-router.route("/id").post( [checkUserIsAuthenticated, checkRoles([ROLES.ADMIN])], listUser);
+router.route("/user").post( [checkUserIsAuthenticated, checkRoles([ROLES.ADMIN])], listUser);
 router.route("/login").post([validateSchema(loginSchema)], loginUser);
 
 router

@@ -68,13 +68,18 @@
         }
       }
     },
-    "/users/id": {
+    "/users/user": {
       "post": {
         "tags": [
           "Users"
         ],
         "description": "",
         "parameters": [
+          {
+            "name": "authorization",
+            "in": "header",
+            "type": "string"
+          },
           {
             "name": "obj",
             "in": "body",
@@ -87,6 +92,9 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
           },
           "401": {
             "description": "Unauthorized"

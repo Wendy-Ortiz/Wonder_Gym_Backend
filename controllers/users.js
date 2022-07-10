@@ -100,9 +100,10 @@ exports.loginUser = async (req, res) => {
             process.env.JWT_KEY,
             { expiresIn: "40m" }
         );
-
+        delete user.password
         res.json({
             // Envia todos los datos del usuario loggeado y su token
+            ...user[0],
             token,
         });
     } catch (error) {
