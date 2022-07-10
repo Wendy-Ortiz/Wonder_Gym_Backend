@@ -66,6 +66,10 @@ exports.roles = [{
     idRol: 1
 },
 {
+    id: 3,
+    idRol: 2
+},
+{
     id: 4,
     idRol: 2
 },
@@ -123,27 +127,97 @@ exports.usersData = [{
 
 exports.usersRoutines = [{
     id:2,
-    routineName: "Rutina Lunes",
-    exercises: ["Ejercicio 1","Ejercicio 2","Ejercicio 3","Ejercicio 4"]
+    exercises:{
+        title: "Rutina Lunes",
+        options: [
+            "Ejercicio 1",
+            "Ejercicio 2",
+            "Ejercicio 3",
+            "Ejercicio 4"
+        ]
+    }
 },
 {
     id:2,
-    routineName: "Rutina Martes",
-    exercises: ["Ejercicio 1","Ejercicio 2","Ejercicio 3","Ejercicio 4"]
+    exercises:{
+        title: "Rutina Martes",
+        options: [
+            "Ejercicio 5",
+            "Ejercicio 6",
+            "Ejercicio 7",
+            "Ejercicio 8",
+        ]
+    }
 },
 {
     id:2,
-    routineName: "Rutina Miercoles",
-    exercises: ["Ejercicio 1","Ejercicio 2","Ejercicio 3","Ejercicio 4"]
+    exercises:{
+        title: "Rutina Miercoles",
+        options: [
+            "Ejercicio 1",
+            "Ejercicio 3",
+            "Ejercicio 5",
+            "Ejercicio 7"
+        ]
+    }
 },
 {
     id:2,
-    routineName: "Rutina Jueves",
-    exercises: ["Ejercicio 1","Ejercicio 2","Ejercicio 3","Ejercicio 4"]
+    exercises:{
+        title: "Rutina Jueves",
+        options: [
+            "Ejercicio 2",
+            "Ejercicio 4",
+            "Ejercicio 6",
+            "Ejercicio 8"
+        ]
+    }
 },
 {
     id:2,
-    routineName: "Rutina Viernes",
-    exercises: ["Ejercicio 1","Ejercicio 2","Ejercicio 3","Ejercicio 4"]
+    exercises:{
+        title: "Rutina Viernes",
+        options: [
+            "Ejercicio 1",
+            "Ejercicio 2",
+            "Ejercicio 5",
+            "Ejercicio 6"
+        ]
+    }
+},
+{
+    id:2,
+    exercises:{
+        title: "Rutina Sábado",
+        options: [
+            "Ejercicio 1",
+            "Ejercicio 2",
+            "Ejercicio 3",
+            "Ejercicio 4"
+        ]
+    }
+},
+{
+    id:2,
+    exercises:{
+        title: "Rutina Domingo",
+        options: [
+            "Ejercicio 1",
+            "Ejercicio 2",
+            "Ejercicio 3",
+            "Ejercicio 4"
+        ]
+    }
+},
+{
+    id:1,
+    exercises:{
+        title: "Rutina Poderosisima",
+        options: [
+            "Ejercicio 1",
+            "Ejercicio 2",
+            "Ejercicio 3",
+        ]
+    }
 },
 ]

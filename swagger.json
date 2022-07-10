@@ -200,6 +200,35 @@
           }
         }
       }
+    },
+    "/routines/": {
+      "post": {
+        "tags": [
+          "Routines"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "Send routines list of a specific user",
+            "schema": {
+              "$ref": "#/definitions/ListRoutines"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "422": {
+            "description": "Unprocessable Entity"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
     }
   },
   "definitions": {
@@ -256,6 +285,15 @@
         "code": {
           "type": "number",
           "example": 123456
+        }
+      }
+    },
+    "ListRoutines": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "number",
+          "example": 1
         }
       }
     }

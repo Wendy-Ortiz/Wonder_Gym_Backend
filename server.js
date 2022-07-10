@@ -5,7 +5,7 @@ const cors = require("cors");
 
 const swaggerFile = require("./swagger.json");
 const usersRoutes = require("./routes/users");
-
+const routinesRoutes = require("./routes/routines");
 dotenv.config();
 
 const server = express();
@@ -14,6 +14,7 @@ server.use(cors());
 
 //Mount routes
 server.use("/users", usersRoutes);
+server.use("/routines", routinesRoutes);
 
 // Documentation setup
 server.use("/docs", swaggerUI.serve, swaggerUI.setup(swaggerFile));

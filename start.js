@@ -25,6 +25,9 @@ const doc = {
       password: "patito",
       code: 123456,
     },
+    ListRoutines: {
+      id: 1,
+    },
   },
 };
 
