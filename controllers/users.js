@@ -27,9 +27,7 @@ exports.listUser = async(req, res) => {
     try {
     const userPayload = req.body;
     const users = data.usersData;
-    console.log(users, "id", userPayload.id );
-    const userReq = users.filter((element)=>  element.id === userPayload.id )
-    console.log(userReq);
+    const userReq = users.filter((element)=>  { return element.id === userPayload.id});
     if (!userReq || userReq.length === 0){
         res.status(401).send("Datos no válidos");
         return;

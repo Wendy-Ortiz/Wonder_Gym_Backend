@@ -59,7 +59,7 @@ exports.roles = [{
 },
 {
     id: 2,
-    idRol: 2
+    idRol: 1
 },
 {
     id: 3,
@@ -138,7 +138,8 @@ exports.usersRoutines = [{
     }
 },
 {
-    id:2,
+    id:1,
+    userId: 2,
     exercises:{
         title: "Rutina Martes",
         options: [
@@ -151,6 +152,7 @@ exports.usersRoutines = [{
 },
 {
     id:2,
+    userId: 2,
     exercises:{
         title: "Rutina Miercoles",
         options: [
@@ -162,7 +164,8 @@ exports.usersRoutines = [{
     }
 },
 {
-    id:2,
+    id:3,
+    userId: 2,
     exercises:{
         title: "Rutina Jueves",
         options: [
@@ -174,7 +177,8 @@ exports.usersRoutines = [{
     }
 },
 {
-    id:2,
+    id:4,
+    userId: 2,
     exercises:{
         title: "Rutina Viernes",
         options: [
@@ -186,7 +190,8 @@ exports.usersRoutines = [{
     }
 },
 {
-    id:2,
+    id:5,
+    userId: 2,
     exercises:{
         title: "Rutina Sábado",
         options: [
@@ -198,7 +203,8 @@ exports.usersRoutines = [{
     }
 },
 {
-    id:2,
+    id:6,
+    userId: 2,
     exercises:{
         title: "Rutina Domingo",
         options: [
@@ -210,7 +216,8 @@ exports.usersRoutines = [{
     }
 },
 {
-    id:1,
+    id:7,
+    userId: 1,
     exercises:{
         title: "Rutina Poderosisima",
         options: [

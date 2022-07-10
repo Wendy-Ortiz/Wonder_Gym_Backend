@@ -9,7 +9,7 @@ exports.listRoutines = async (req, res) => {
   } */
     const userPayload = req.body;
     try {
-        const userRoutines = data.usersRoutines.filter((element)=> element.id === userPayload.id );
+        const userRoutines = data.usersRoutines.filter((element)=> element.userId === userPayload.id );
         res.status(200).json(userRoutines);
     } catch (error) {
         res.status(500).json({
