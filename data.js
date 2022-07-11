@@ -126,20 +126,9 @@ exports.usersData = [{
 ]
 
 exports.usersRoutines = [{
-    id:2,
-    exercises:{
-        title: "Rutina Lunes",
-        options: [
-            "Ejercicio 1",
-            "Ejercicio 2",
-            "Ejercicio 3",
-            "Ejercicio 4"
-        ]
-    }
-},
-{
     id:1,
     userId: 2,
+    userName: "Wendy Ortiz",
     exercises:{
         title: "Rutina Martes",
         options: [
@@ -153,6 +142,7 @@ exports.usersRoutines = [{
 {
     id:2,
     userId: 2,
+    userName: "Wendy Ortiz",
     exercises:{
         title: "Rutina Miercoles",
         options: [
@@ -166,6 +156,7 @@ exports.usersRoutines = [{
 {
     id:3,
     userId: 2,
+    userName: "Wendy Ortiz",
     exercises:{
         title: "Rutina Jueves",
         options: [
@@ -179,6 +170,7 @@ exports.usersRoutines = [{
 {
     id:4,
     userId: 2,
+    userName: "Wendy Ortiz",
     exercises:{
         title: "Rutina Viernes",
         options: [
@@ -192,6 +184,7 @@ exports.usersRoutines = [{
 {
     id:5,
     userId: 2,
+    userName: "Wendy Ortiz",
     exercises:{
         title: "Rutina Sábado",
         options: [
@@ -205,6 +198,7 @@ exports.usersRoutines = [{
 {
     id:6,
     userId: 2,
+    userName: "Wendy Ortiz",
     exercises:{
         title: "Rutina Domingo",
         options: [
@@ -218,6 +212,7 @@ exports.usersRoutines = [{
 {
     id:7,
     userId: 1,
+    userName: "Axel Matus",
     exercises:{
         title: "Rutina Poderosisima",
         options: [
