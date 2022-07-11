@@ -62,6 +62,12 @@ exports.createUser = async (req, res) => {
                 saltRounds
             ),
         });
+        let lastRolId = (data.roles).length;
+        const newRolId = lastRolId + 1;
+        data.roles.push({
+            id: newRolId,
+            idRol: 2,
+        });
         res.status(200).json(data.all_Users[lastId].id);
     } catch (error) {
         res.status(500).json({
