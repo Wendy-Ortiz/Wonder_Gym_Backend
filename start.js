@@ -5,7 +5,7 @@ const doc = {
     title: "Wonder-Gym - API",
     description: "Este es el API de la aplicación Web de Wonder Gym.",
   },
-  host: "localhost:3001",
+  host: "shrouded-savannah-26642.herokuapp.com/",
   schemes: ["http", "https"],
   definitions: {
     CreateUser: {
