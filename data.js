@@ -222,4 +222,60 @@ exports.usersRoutines = [{
         ]
     }
 },
+{
+    id:8,
+    userId: 3,
+    userName: "Daniel Calvo",
+    exercises:{
+        title: "Rutina Lunes",
+        options: [
+            "Ejercicio 1",
+            "Ejercicio 2",
+            "Ejercicio 3",
+        ]
+    }
+},
+{
+    id:9,
+    userId: 4,
+    userName: "Alejandro Elvira Ramirez",
+    exercises:{
+        title: "Rutina Tren Inferior",
+        options: [
+            "Ejercicio 1",
+            "Ejercicio 2",
+            "Ejercicio 3",
+        ]
+    }
+},
+{
+    id:10,
+    userId: 5,
+    userName: "Xinia Amador Porras",
+    exercises:{
+        title: "Rutina Tren Superior",
+        options: [
+            "Ejercicio 1",
+            "Ejercicio 2",
+            "Ejercicio 3",
+            "Ejercicio 10",
+            "Ejercicio 23",
+            "Ejercicio 14",
+        ]
+    }
+},
+{
+    id:11,
+    userId: 6,
+    userName: "Eva Maria Torres Rodriguez",
+    exercises:{
+        title: "Rutina Miercoles",
+        options: [
+            "Ejercicio 1",
+            "Ejercicio 2",
+            "Ejercicio 3",
+            "Ejercicio 4",
+        ]
+    }
+},
 ]
